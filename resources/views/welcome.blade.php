@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Project</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,6 +12,9 @@
         <!-- Styles -->
         <style>
             html, body {
+                background-image: url("https://www.muralswallpaper.co.uk/app/uploads/green-hexagon-geometric-pattern-wallpaper-mural-Room-825x535.jpg");
+                
+                background-size: cover;
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
@@ -43,11 +46,21 @@
             .content {
                 text-align: center;
             }
-
+            
             .title {
                 font-size: 84px;
             }
-
+            .part-1 {
+            width: 100%;
+            height: 100vh; /*vh = view port*/
+        background: linear-gradient(
+    rgba(55, 102, 102, 0.589),
+    rgba(0, 0, 0, 0.5)
+    ),
+    url(background.jpg) center no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -78,22 +91,12 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="content">
+                    <div style="color: rgb(63, 98, 100)" class="title m-b-md">
+                        Welcome!
+                    </div>
+                    <h3 style="color: rgba(63, 98, 100, 0.623)"> We are here to solve your problem. </h3>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
         </div>
     </body>
 </html>
