@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pertanyaan;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,8 +22,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        if($request->has('cari'))
+        {
+            $pertanyaans = Pertanyaan::where('pertanyaan', 'LIKE', '%'.$request->cari.'%')->orderBy('created_at', 'desc')->paginate(10);
+        }
+        else{
+            $pertanyaans = Pertanyaan::orderBy('created_at', 'desc')->paginate(10);
+        }
+        return view('home', compact ('pertanyaans'));
     }
 }
