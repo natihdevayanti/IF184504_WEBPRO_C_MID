@@ -52,7 +52,7 @@
             }
             .part-1 {
             width: 100%;
-            height: 100vh; /*vh = view port*/
+            height: 100vh; 
         background: linear-gradient(
     rgba(55, 102, 102, 0.589),
     rgba(0, 0, 0, 0.5)
