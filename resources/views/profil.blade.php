@@ -6,7 +6,6 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">User Profil</div>
-
                 <div class="card-body">
                     <div class="d-flex">
                         <medium>Nama : {{ Auth::user()->name }}</medium>
